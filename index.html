@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Rock+Salt&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d23941fe54.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Durden</title>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="social">
+      <a href="https://www.facebook.com/OfficialDURDEN/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://open.spotify.com/album/1YNpCdZTyq4YwB4R0fk4QO?si=AB_WZDQmRWqA0GDZ8N4GMA" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://www.instagram.com/durdenofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1 class="quote">"It’s only after we’ve lost everything that we’re free to do anything."</h1>
+    <img src="images/logo.png" alt="logo" class="logo-img">
+  </header>
+
+  <main class="container">
+
+    <div class="album-section">
+      <div class="album-section-item album-section-img">
+        <h2 class="album-img-txt">Out now on spotify!</h2>
+        <img src="images/album-cover.png" alt="logo" class="album-img">
+      </div>
+      <div class="album-section-item album-spotify">
+        <iframe src="https://open.spotify.com/embed/album/1YNpCdZTyq4YwB4R0fk4QO" width="380" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <!-- <h2 class="header">Contact</h2> -->
+      <p class="contact">We are Durden, a band from Liverpool, England. If you like what you hear, get in touch!</p>
+      <a class="message" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fm.me%2FOfficialDURDEN%3Ffbclid%3DIwAR3a7NKuhMjt9GcNFDG704gjRZWu6D7jUSwM_NCQXA2bBvhX1-q6fpyf5p0&h=AT3ha8RdqYtZQEtdwKeXNRs4CHuoxDwufXfUmCtczDkn-UyPsR-uUa72LulYB0M6Z6MD3woueT7NyPnUn7wp9-0S0qZBQTsvwxOjtttUo7_-M1wZrWEgvhBZreXTjXhNydOfbdAIEeqkMdbK"><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:5EbFwgSqTNltNo9M5c6OT9&size=detail&theme=light&show-count=0" width="180" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+  <!-- <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:5EbFwgSqTNltNo9M5c6OT9&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe> -->
+    <p id="copyright"></p>
+      <script>
+        document.getElementById("copyright").innerHTML = "© Durden " + new Date().getFullYear();
+      </script>
+  </footer>
+
+  <script>
+    const albumSection = document.querySelector('.album-section');
+    const ablumImg = document.querySelector('.album-img');
+    const topOfSection = albumSection.offsetTop - 120;
+    const windowWidth = window.matchMedia("(max-width: 900px)")
+
+    function swingBox(){
+      console.log(topOfSection, window.scrollY);
+      if(topOfSection <= window.scrollY && !windowWidth.matches){
+        ablumImg.classList.add('box-rotate');
+       }
+    }
+
+    window.addEventListener('scroll', swingBox);
+
+  </script>
+
+</body>
+
+</html>
