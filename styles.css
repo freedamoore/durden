@@ -230,10 +230,18 @@ body {
 
   .album-section-item{
     padding-bottom: 2rem;
-    width: 90%;
+    width: 100%;
   }
   .contact-section{
     font-size: 1rem;
     height: 380px;
+  }
+
+  .album-img{
+    width: 80%
+  }
+
+  .spotify-link{
+    width: 80%;
   }
 }
